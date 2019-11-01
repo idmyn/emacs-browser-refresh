@@ -80,6 +80,9 @@
 (defmethod chrome ((refresher browser-refresh-mac))
   (browser-refresh--chrome-applescript "Google Chrome" (oref refresher :activate)))
 
+(defmethod brave ((refresher browser-refresh-mac))
+  (browser-refresh--chrome-applescript "Brave" (oref refresher :activate)))
+
 (defmethod firefox ((refresher browser-refresh-mac))
   (do-applescript
    (format
